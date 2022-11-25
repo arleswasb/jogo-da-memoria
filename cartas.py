@@ -19,33 +19,33 @@ class cartas:
         
         if conf.fase == 1:
             cont=0
-            for item in os.listdir('imagem_geral/imagens1/fig'):
+            for item in os.listdir('imagens1/fig'):
                 self.cartas_memoria.append((item.split('.')[0],cont)) #cria lista cartas_memoria
                 cont+=1
             cont1=0
-            for item in os.listdir('imagem_geral/imagens1/pers'):
+            for item in os.listdir('imagens1/pers'):
                 self.cartas_memoria.append((item.split('.')[0],cont1)) #cria lista cartas_memoria
                 cont1+=1
             random.shuffle(self.cartas_memoria)
             return self.cartas_memoria
         if conf.fase == 2:
             cont=0
-            for item in os.listdir('imagem_geral/imagens2/fig'):
+            for item in os.listdir('imagens2/fig'):
                 self.cartas_memoria.append((item.split('.')[0],cont)) #cria lista cartas_memoria
                 cont+=1
             cont1=0
-            for item in os.listdir('imagem_geral/imagens2/pers'):
+            for item in os.listdir('imagens2/pers'):
                 self.cartas_memoria.append((item.split('.')[0],cont1)) #cria lista cartas_memoria
                 cont1+=1
             random.shuffle(self.cartas_memoria)
             return self.cartas_memoria
         if conf.fase == 3:
             cont=0
-            for item in os.listdir('imagem_geral/imagens3/fig'):
+            for item in os.listdir('imagens3/fig'):
                 self.cartas_memoria.append((item.split('.')[0],cont)) #cria lista cartas_memoria
                 cont+=1
             cont1=0
-            for item in os.listdir('imagem_geral/imagens3/pers'):
+            for item in os.listdir('imagens3/pers'):
                 self.cartas_memoria.append((item.split('.')[0],cont1)) #cria lista cartas_memoria
                 cont1+=1
             random.shuffle(self.cartas_memoria)
@@ -55,13 +55,13 @@ class cartas:
         for item in self.cartas_memoria:
             if conf.fase == 1:
                 try:
-                    picture = pygame.image.load(f'imagem_geral/imagens1/fig/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens1/fig/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
                     self.mem_figuraRect.append(pictureRect)
                 except:
-                    picture = pygame.image.load(f'imagem_geral/imagens1/pers/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens1/pers/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
@@ -69,13 +69,13 @@ class cartas:
 
             if conf.fase == 2:
                 try:
-                    picture = pygame.image.load(f'imagem_geral/imagens2/fig/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens2/fig/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
                     self.mem_figuraRect.append(pictureRect)
                 except:
-                    picture = pygame.image.load(f'imagem_geral/imagens2/pers/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens2/pers/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
@@ -83,13 +83,13 @@ class cartas:
 
             if conf.fase == 3:
                 try:
-                    picture = pygame.image.load(f'imagem_geral/imagens3/fig/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens3/fig/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
                     self.mem_figuraRect.append(pictureRect)
                 except:
-                    picture = pygame.image.load(f'imagem_geral/imagens3/pers/{item[0]}.png')
+                    picture = pygame.image.load(f'imagens3/pers/{item[0]}.png')
                     picture = pygame.transform.scale(picture, (conf.tamanho_figura, conf.tamanho_figura))
                     self.mem_figura.append(picture)
                     pictureRect = picture.get_rect()
